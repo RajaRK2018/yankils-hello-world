@@ -4,7 +4,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Hello world!!'
-                mvn -v
+                sh '''
+                    echo "PATH = ${PATH}"
+                    echo "M2_HOME = ${M2_HOME}"
+                '''
             }
         }
     }
