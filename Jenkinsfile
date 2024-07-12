@@ -13,6 +13,7 @@ pipeline {
                     echo "M2_HOME = ${M2_HOME}"
                     mvn -v
                     mvn clean install
+                    mvn tomcat7:deploy
                 '''
             }
         }
