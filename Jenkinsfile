@@ -17,4 +17,9 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            archiveArtifacts artifacts: 'webapps/target/*', fingerprint: true
+        }
+    }
 }
