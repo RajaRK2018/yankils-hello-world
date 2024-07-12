@@ -19,7 +19,7 @@ pipeline {
     }
     post {
         always {
-            archiveArtifacts artifacts: 'webapps/target/*', fingerprint: true
+            archiveArtifacts artifacts: 'webapp/target/*', fingerprint: true
         }
     }
 }
